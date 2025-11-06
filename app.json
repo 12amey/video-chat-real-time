@@ -1,0 +1,24 @@
+{
+  "name": "3D Video Chat Application",
+  "description": "Real-time video chat app with 3D animations using WebRTC and Socket.IO",
+  "repository": "https://github.com/yourusername/video-chat-v1",
+  "logo": "https://cdn-icons-png.flaticon.com/512/2991/2991148.png",
+  "keywords": ["node", "express", "webrtc", "socket.io", "video-chat", "peerjs"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}

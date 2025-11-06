@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Video Chat - Connect in Style</title>
+    <link rel="stylesheet" href="home-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="fas fa-video"></i>
+                <span>3D Video Chat</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="text-content">
+                <h1 class="glitch" data-text="Connect in 3D">Connect in 3D</h1>
+                <p class="hero-subtitle">Experience the future of video calling with stunning 3D animations and crystal-clear communication</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" id="startCallBtn">
+                        <i class="fas fa-video"></i>
+                        Start New Call
+                    </button>
+                    <button class="btn btn-secondary" id="joinCallBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Join a Call
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <i class="fas fa-users"></i>
+                    <span>HD Quality</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-lock"></i>
+                    <span>Secure</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-bolt"></i>
+                    <span>Fast</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2 class="section-title">Amazing Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>HD Video Quality</h3>
+                <p>Experience crystal-clear video calls with high-definition quality</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>Real-time Chat</h3>
+                <p>Send messages instantly while on a video call</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Secure & Private</h3>
+                <p>End-to-end encryption keeps your conversations private</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Responsive Design</h3>
+                <p>Works seamlessly on all devices and screen sizes</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Multi-User Support</h3>
+                <p>Connect with multiple people at the same time</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <h3>Easy Sharing</h3>
+                <p>Share your room link with one click</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="joinModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Join a Call</h2>
+            <p>Enter the room ID to join an existing call</p>
+            <input type="text" id="roomIdInput" placeholder="Enter Room ID">
+            <button class="btn btn-primary" id="joinRoomBtn">
+                <i class="fas fa-sign-in-alt"></i>
+                Join Room
+            </button>
+        </div>
+    </div>
+
+    <script src="home-script.js"></script>
+</body>
+</html>

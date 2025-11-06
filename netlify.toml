@@ -1,0 +1,30 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "16"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Note: This configuration is for reference only
+# Full video chat functionality requires a Node.js server
+# Netlify drag-and-drop static hosting will NOT support:
+# - Socket.IO real-time communication
+# - WebRTC peer connections
+# - Live video/audio streaming
+
+# For full functionality, deploy to:
+# - Render (recommended): https://render.com
+# - Railway: https://railway.app
+# - Heroku: https://heroku.com
+# - Fly.io: https://fly.io

@@ -1,0 +1,18 @@
+# Render Blueprint for Video Chat App
+# Use this for one-click deployment on Render.com
+
+services:
+  - type: web
+    name: video-chat-app
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        fromGroup: false
+        generateValue: false
+        sync: false
